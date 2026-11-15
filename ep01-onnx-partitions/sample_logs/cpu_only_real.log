@@ -1,0 +1,208 @@
+2026-11-15 19:01:17.751838696 [I:onnxruntime:, inference_session.cc:755 TraceSessionOptions] Session Options {  execution_mode:0 execution_order:DEFAULT enable_profiling:0 optimized_model_filepath:"" enable_mem_pattern:1 enable_mem_reuse:1 enable_cpu_mem_arena:1 profile_file_prefix:onnxruntime_profile_ session_logid: session_log_severity_level:0 session_log_verbosity_level:0 max_num_graph_transformation_steps:10 graph_optimization_level:4 intra_op_param:OrtThreadPoolParams { thread_pool_size: 0 auto_set_affinity: 0 allow_spinning: 1 spin_duration_us: -1 spin_backoff_max: 1 dynamic_block_base_: 0 stack_size: 0 affinity_str:  set_denormal_as_zero: 0 } inter_op_param:OrtThreadPoolParams { thread_pool_size: 0 auto_set_affinity: 0 allow_spinning: 1 spin_duration_us: -1 spin_backoff_max: 1 dynamic_block_base_: 0 stack_size: 0 affinity_str:  set_denormal_as_zero: 0 } use_per_session_threads:1 thread_pool_allow_spinning:1 use_deterministic_compute:0 ep_selection_policy:0 config_options: {  } }
+2026-11-15 19:01:17.751907107 [I:onnxruntime:, inference_session.cc:522 operator()] Flush-to-zero and denormal-as-zero are off
+2026-11-15 19:01:17.751913157 [I:onnxruntime:, inference_session.cc:530 ConstructorCommon] Creating and using per session threadpools since use_per_session_threads_ is true
+2026-11-15 19:01:17.751929532 [I:onnxruntime:, inference_session.cc:575 ConstructorCommon] Dynamic block base set to 0
+2026-11-15 19:01:17.756337116 [I:onnxruntime:, inference_session.cc:2399 Initialize] Initializing session.
+2026-11-15 19:01:17.773724028 [I:onnxruntime:, graph_partitioner.cc:1413 InlineFunctionsAOT] This model does not have any local functions defined. AOT Inlining is not performed
+2026-11-15 19:01:17.774105115 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer EnsureUniqueDQForNodeUnit modified: 0 with status: OK
+2026-11-15 19:01:17.774110507 [V:onnxruntime:, graph_transformer_mgr.cc:31 ApplyTransformers] No graph transformers registered for level 0.
+2026-11-15 19:01:17.774112783 [V:onnxruntime:, graph_transformer_mgr.cc:35 ApplyTransformers] Applying 16 graph transformer(s) for level 1 for up to 10 step(s).
+2026-11-15 19:01:17.774114864 [V:onnxruntime:, graph_transformer_mgr.cc:43 ApplyTransformers] Graph transformer step 1 of 10 for level 1 started.
+2026-11-15 19:01:17.774116363 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer Level1_RuleBasedTransformer on step 1.
+2026-11-15 19:01:17.774120792 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer Level1_RuleBasedTransformer modified: 0 with status: OK
+2026-11-15 19:01:17.774122406 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer DoubleQDQPairsRemover on step 1.
+2026-11-15 19:01:17.774124940 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer DoubleQDQPairsRemover modified: 0 with status: OK
+2026-11-15 19:01:17.774126303 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer ConstantSharing on step 1.
+2026-11-15 19:01:17.774254311 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer ConstantSharing modified: 0 with status: OK
+2026-11-15 19:01:17.774257446 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer CommonSubexpressionElimination on step 1.
+2026-11-15 19:01:17.774462674 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer CommonSubexpressionElimination modified: 0 with status: OK
+2026-11-15 19:01:17.774465813 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer ConstantFolding on step 1.
+2026-11-15 19:01:17.774470713 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer ConstantFolding modified: 0 with status: OK
+2026-11-15 19:01:17.774472266 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer MatMulAddFusion on step 1.
+2026-11-15 19:01:17.774474903 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer MatMulAddFusion modified: 0 with status: OK
+2026-11-15 19:01:17.774476216 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer ReshapeFusion on step 1.
+2026-11-15 19:01:17.774486558 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer ReshapeFusion modified: 0 with status: OK
+2026-11-15 19:01:17.774487983 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer FreeDimensionOverrideTransformer on step 1.
+2026-11-15 19:01:17.774490638 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer FreeDimensionOverrideTransformer modified: 0 with status: OK
+2026-11-15 19:01:17.774491952 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer SliceConcatToSpaceToDepthFusion on step 1.
+2026-11-15 19:01:17.774494272 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer SliceConcatToSpaceToDepthFusion modified: 0 with status: OK
+2026-11-15 19:01:17.774495682 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer GeluFusionL1 on step 1.
+2026-11-15 19:01:17.774498063 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer GeluFusionL1 modified: 0 with status: OK
+2026-11-15 19:01:17.774499319 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer LayerNormFusionL1 on step 1.
+2026-11-15 19:01:17.774503578 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer LayerNormFusionL1 modified: 0 with status: OK
+2026-11-15 19:01:17.774504863 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer QDQPropagationTransformer on step 1.
+2026-11-15 19:01:17.774508718 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer QDQPropagationTransformer modified: 0 with status: OK
+2026-11-15 19:01:17.774510072 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer WeightBiasQuantization on step 1.
+2026-11-15 19:01:17.774513964 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer WeightBiasQuantization modified: 0 with status: OK
+2026-11-15 19:01:17.774515304 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer EnsureUniqueDQForNodeUnit on step 1.
+2026-11-15 19:01:17.774517084 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer EnsureUniqueDQForNodeUnit modified: 0 with status: OK
+2026-11-15 19:01:17.774518355 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer WhereDummyDq on step 1.
+2026-11-15 19:01:17.774520478 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer WhereDummyDq modified: 0 with status: OK
+2026-11-15 19:01:17.774521832 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer TransposeOptimizer on step 1.
+2026-11-15 19:01:17.774536069 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer TransposeOptimizer modified: 0 with status: OK
+2026-11-15 19:01:17.774537864 [V:onnxruntime:, graph_transformer_mgr.cc:62 ApplyTransformers] Graph transformer step 1 of 10 for level 1 completed. graph_changed: 0.
+2026-11-15 19:01:17.774539368 [V:onnxruntime:, graph_transformer_mgr.cc:67 ApplyTransformers] Stopping graph transformer iteration for level 1 after step 1 because the graph was not modified.
+2026-11-15 19:01:17.774631511 [I:onnxruntime:, inference_session.cc:1765 TransformGraph] Running graph optimizations in loop 1 time/s (Graph Optimizations Loop Level : 1)
+2026-11-15 19:01:17.774634892 [V:onnxruntime:, graph_transformer_mgr.cc:35 ApplyTransformers] Applying 30 graph transformer(s) for level 2 for up to 10 step(s).
+2026-11-15 19:01:17.774636812 [V:onnxruntime:, graph_transformer_mgr.cc:43 ApplyTransformers] Graph transformer step 1 of 10 for level 2 started.
+2026-11-15 19:01:17.774638365 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer Level2_RuleBasedTransformer on step 1.
+2026-11-15 19:01:17.774642550 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer Level2_RuleBasedTransformer modified: 0 with status: OK
+2026-11-15 19:01:17.774646428 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer TransposeOptimizer_CPUExecutionProvider on step 1.
+2026-11-15 19:01:17.774651022 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer TransposeOptimizer_CPUExecutionProvider modified: 0 with status: OK
+2026-11-15 19:01:17.774652482 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer QDQS8ToU8Transformer on step 1.
+2026-11-15 19:01:17.774654895 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer QDQS8ToU8Transformer modified: 0 with status: OK
+2026-11-15 19:01:17.774656246 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer QDQSelectorActionTransformer on step 1.
+2026-11-15 19:01:17.774664398 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer QDQSelectorActionTransformer modified: 0 with status: OK
+2026-11-15 19:01:17.774665883 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer GemmActivationFusion on step 1.
+2026-11-15 19:01:17.774668046 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer GemmActivationFusion modified: 0 with status: OK
+2026-11-15 19:01:17.774669370 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer MatMulIntegerToFloatFusion on step 1.
+2026-11-15 19:01:17.774671880 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer MatMulIntegerToFloatFusion modified: 0 with status: OK
+2026-11-15 19:01:17.774673217 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer DynamicQuantizeMatMulFusion on step 1.
+2026-11-15 19:01:17.774675566 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer DynamicQuantizeMatMulFusion modified: 0 with status: OK
+2026-11-15 19:01:17.774676831 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer ConvActivationFusion on step 1.
+2026-11-15 19:01:17.774738283 [V:onnxruntime:, selector_action_transformer.cc:126 MatchAndProcess] Matched Conv
+2026-11-15 19:01:17.774840851 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer ConvActivationFusion modified: 1 with status: OK
+2026-11-15 19:01:17.774928708 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer GeluFusionL2 on step 1.
+2026-11-15 19:01:17.774936996 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer GeluFusionL2 modified: 0 with status: OK
+2026-11-15 19:01:17.774939180 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer LayerNormFusionL2 on step 1.
+2026-11-15 19:01:17.774941808 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer LayerNormFusionL2 modified: 0 with status: OK
+2026-11-15 19:01:17.774943308 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer SimplifiedLayerNormFusion on step 1.
+2026-11-15 19:01:17.774945706 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer SimplifiedLayerNormFusion modified: 0 with status: OK
+2026-11-15 19:01:17.774947160 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer AttentionFusion on step 1.
+2026-11-15 19:01:17.775038767 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer AttentionFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775042253 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer EmbedLayerNormFusion on step 1.
+2026-11-15 19:01:17.775046146 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer EmbedLayerNormFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775047853 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer GatherSliceToSplitFusion on step 1.
+2026-11-15 19:01:17.775051039 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer GatherSliceToSplitFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775052382 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer GatherToSliceFusion on step 1.
+2026-11-15 19:01:17.775056742 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer GatherToSliceFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775058249 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer MatmulTransposeFusion on step 1.
+2026-11-15 19:01:17.775060432 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer MatmulTransposeFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775061779 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer BiasGeluFusion on step 1.
+2026-11-15 19:01:17.775063963 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer BiasGeluFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775065292 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer GroupQueryAttentionFusion on step 1.
+2026-11-15 19:01:17.775067915 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer GroupQueryAttentionFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775069228 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer MatMulAddFusion on step 1.
+2026-11-15 19:01:17.775071006 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer MatMulAddFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775072286 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer SkipLayerNormFusion on step 1.
+2026-11-15 19:01:17.775074277 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer SkipLayerNormFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775075581 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer BiasSkipLayerNormFusion on step 1.
+2026-11-15 19:01:17.775077572 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer BiasSkipLayerNormFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775078855 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer FastGeluFusion on step 1.
+2026-11-15 19:01:17.775080988 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer FastGeluFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775082279 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer QuickGeluFusion on step 1.
+2026-11-15 19:01:17.775084616 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer QuickGeluFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775085882 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer BiasSoftmaxFusion on step 1.
+2026-11-15 19:01:17.775088122 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer BiasSoftmaxFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775089383 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer BiasDropoutFusion on step 1.
+2026-11-15 19:01:17.775091675 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer BiasDropoutFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775092997 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer MatMulScaleFusion on step 1.
+2026-11-15 19:01:17.775095366 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer MatMulScaleFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775096666 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer MatMulActivationFusion on step 1.
+2026-11-15 19:01:17.775098711 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer MatMulActivationFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775100002 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer MatMulNBitsFusion on step 1.
+2026-11-15 19:01:17.775102329 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer MatMulNBitsFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775103652 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer GroupQueryAttentionPreNormFusion on step 1.
+2026-11-15 19:01:17.775107519 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer GroupQueryAttentionPreNormFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775108875 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer QDQFinalCleanupTransformer on step 1.
+2026-11-15 19:01:17.775111180 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer QDQFinalCleanupTransformer modified: 0 with status: OK
+2026-11-15 19:01:17.775112864 [V:onnxruntime:, graph_transformer_mgr.cc:62 ApplyTransformers] Graph transformer step 1 of 10 for level 2 completed. graph_changed: 1.
+2026-11-15 19:01:17.775114324 [V:onnxruntime:, graph_transformer_mgr.cc:43 ApplyTransformers] Graph transformer step 2 of 10 for level 2 started.
+2026-11-15 19:01:17.775115893 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer Level2_RuleBasedTransformer on step 2.
+2026-11-15 19:01:17.775117735 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer Level2_RuleBasedTransformer modified: 0 with status: OK
+2026-11-15 19:01:17.775119288 [V:onnxruntime:, graph_transformer_mgr.cc:49 ApplyTransformers] Skipping graph transformer TransposeOptimizer_CPUExecutionProvider on step 2 because it should only apply once.
+2026-11-15 19:01:17.775120567 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer QDQS8ToU8Transformer on step 2.
+2026-11-15 19:01:17.775122446 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer QDQS8ToU8Transformer modified: 0 with status: OK
+2026-11-15 19:01:17.775123735 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer QDQSelectorActionTransformer on step 2.
+2026-11-15 19:01:17.775127180 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer QDQSelectorActionTransformer modified: 0 with status: OK
+2026-11-15 19:01:17.775128546 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer GemmActivationFusion on step 2.
+2026-11-15 19:01:17.775130357 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer GemmActivationFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775131646 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer MatMulIntegerToFloatFusion on step 2.
+2026-11-15 19:01:17.775133458 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer MatMulIntegerToFloatFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775134713 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer DynamicQuantizeMatMulFusion on step 2.
+2026-11-15 19:01:17.775136690 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer DynamicQuantizeMatMulFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775137960 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer ConvActivationFusion on step 2.
+2026-11-15 19:01:17.775140014 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer ConvActivationFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775141389 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer GeluFusionL2 on step 2.
+2026-11-15 19:01:17.775143540 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer GeluFusionL2 modified: 0 with status: OK
+2026-11-15 19:01:17.775144822 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer LayerNormFusionL2 on step 2.
+2026-11-15 19:01:17.775146739 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer LayerNormFusionL2 modified: 0 with status: OK
+2026-11-15 19:01:17.775148014 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer SimplifiedLayerNormFusion on step 2.
+2026-11-15 19:01:17.775149735 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer SimplifiedLayerNormFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775152314 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer AttentionFusion on step 2.
+2026-11-15 19:01:17.775154035 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer AttentionFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775155334 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer EmbedLayerNormFusion on step 2.
+2026-11-15 19:01:17.775157052 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer EmbedLayerNormFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775158309 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer GatherSliceToSplitFusion on step 2.
+2026-11-15 19:01:17.775160099 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer GatherSliceToSplitFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775161387 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer GatherToSliceFusion on step 2.
+2026-11-15 19:01:17.775163094 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer GatherToSliceFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775164391 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer MatmulTransposeFusion on step 2.
+2026-11-15 19:01:17.775166197 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer MatmulTransposeFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775167533 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer BiasGeluFusion on step 2.
+2026-11-15 19:01:17.775169286 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer BiasGeluFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775170571 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer GroupQueryAttentionFusion on step 2.
+2026-11-15 19:01:17.775172275 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer GroupQueryAttentionFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775173560 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer MatMulAddFusion on step 2.
+2026-11-15 19:01:17.775175256 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer MatMulAddFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775176562 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer SkipLayerNormFusion on step 2.
+2026-11-15 19:01:17.775178243 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer SkipLayerNormFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775179554 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer BiasSkipLayerNormFusion on step 2.
+2026-11-15 19:01:17.775181252 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer BiasSkipLayerNormFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775182532 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer FastGeluFusion on step 2.
+2026-11-15 19:01:17.775184324 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer FastGeluFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775203901 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer QuickGeluFusion on step 2.
+2026-11-15 19:01:17.775208027 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer QuickGeluFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775210286 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer BiasSoftmaxFusion on step 2.
+2026-11-15 19:01:17.775213355 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer BiasSoftmaxFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775215019 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer BiasDropoutFusion on step 2.
+2026-11-15 19:01:17.775217404 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer BiasDropoutFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775220708 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer MatMulScaleFusion on step 2.
+2026-11-15 19:01:17.775222651 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer MatMulScaleFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775223988 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer MatMulActivationFusion on step 2.
+2026-11-15 19:01:17.775225766 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer MatMulActivationFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775227099 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer MatMulNBitsFusion on step 2.
+2026-11-15 19:01:17.775229124 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer MatMulNBitsFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775230403 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer GroupQueryAttentionPreNormFusion on step 2.
+2026-11-15 19:01:17.775232321 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer GroupQueryAttentionPreNormFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775233674 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer QDQFinalCleanupTransformer on step 2.
+2026-11-15 19:01:17.775235466 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer QDQFinalCleanupTransformer modified: 0 with status: OK
+2026-11-15 19:01:17.775237115 [V:onnxruntime:, graph_transformer_mgr.cc:62 ApplyTransformers] Graph transformer step 2 of 10 for level 2 completed. graph_changed: 0.
+2026-11-15 19:01:17.775238693 [V:onnxruntime:, graph_transformer_mgr.cc:67 ApplyTransformers] Stopping graph transformer iteration for level 2 after step 2 because the graph was not modified.
+2026-11-15 19:01:17.775240349 [V:onnxruntime:, graph_transformer_mgr.cc:35 ApplyTransformers] Applying 3 graph transformer(s) for level 3 for up to 10 step(s).
+2026-11-15 19:01:17.775241753 [V:onnxruntime:, graph_transformer_mgr.cc:43 ApplyTransformers] Graph transformer step 1 of 10 for level 3 started.
+2026-11-15 19:01:17.775243184 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer NchwcTransformer on step 1.
+2026-11-15 19:01:17.775282006 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer NchwcTransformer modified: 1 with status: OK
+2026-11-15 19:01:17.775314637 [I:onnxruntime:, graph.cc:5586 CleanUnusedInitializersAndNodeArgs] Removing initializer 'w'. It is no longer used by any node.
+2026-11-15 19:01:17.775318575 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer NhwcTransformer on step 1.
+2026-11-15 19:01:17.775324421 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer NhwcTransformer modified: 0 with status: OK
+2026-11-15 19:01:17.775325953 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer ConvAddActivationFusion on step 1.
+2026-11-15 19:01:17.775328631 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer ConvAddActivationFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775330173 [V:onnxruntime:, graph_transformer_mgr.cc:62 ApplyTransformers] Graph transformer step 1 of 10 for level 3 completed. graph_changed: 1.
+2026-11-15 19:01:17.775331573 [V:onnxruntime:, graph_transformer_mgr.cc:43 ApplyTransformers] Graph transformer step 2 of 10 for level 3 started.
+2026-11-15 19:01:17.775332908 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer NchwcTransformer on step 2.
+2026-11-15 19:01:17.775335501 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer NchwcTransformer modified: 0 with status: OK
+2026-11-15 19:01:17.775336833 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer NhwcTransformer on step 2.
+2026-11-15 19:01:17.775339729 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer NhwcTransformer modified: 0 with status: OK
+2026-11-15 19:01:17.775345165 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer ConvAddActivationFusion on step 2.
+2026-11-15 19:01:17.775347357 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer ConvAddActivationFusion modified: 0 with status: OK
+2026-11-15 19:01:17.775348751 [V:onnxruntime:, graph_transformer_mgr.cc:62 ApplyTransformers] Graph transformer step 2 of 10 for level 3 completed. graph_changed: 0.
+2026-11-15 19:01:17.775350078 [V:onnxruntime:, graph_transformer_mgr.cc:67 ApplyTransformers] Stopping graph transformer iteration for level 3 after step 2 because the graph was not modified.
+2026-11-15 19:01:17.775356732 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer RemoveDuplicateCastTransformer modified: 0 with status: OK
+2026-11-15 19:01:17.775358655 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer CastFloat16Transformer modified: 0 with status: OK
+2026-11-15 19:01:17.775360433 [V:onnxruntime:, graph_transformer_mgr.cc:35 ApplyTransformers] Applying 1 graph transformer(s) for level 4 for up to 10 step(s).
+2026-11-15 19:01:17.775361730 [V:onnxruntime:, graph_transformer_mgr.cc:43 ApplyTransformers] Graph transformer step 1 of 10 for level 4 started.
+2026-11-15 19:01:17.775363035 [V:onnxruntime:, graph_transformer_mgr.cc:55 ApplyTransformers] Applying graph transformer FuseFp16InitializerToFp32NodeTransformer on step 1.
+2026-11-15 19:01:17.775365299 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer FuseFp16InitializerToFp32NodeTransformer modified: 0 with status: OK
+2026-11-15 19:01:17.775366674 [V:onnxruntime:, graph_transformer_mgr.cc:62 ApplyTransformers] Graph transformer step 1 of 10 for level 4 completed. graph_changed: 0.
+2026-11-15 19:01:17.775367936 [V:onnxruntime:, graph_transformer_mgr.cc:67 ApplyTransformers] Stopping graph transformer iteration for level 4 after step 1 because the graph was not modified.
+2026-11-15 19:01:17.775370872 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer MemcpyTransformer modified: 0 with status: OK
+2026-11-15 19:01:17.775380364 [V:onnxruntime:, session_state.cc:1378 VerifyEachNodeIsAssignedToAnEp] Node placements
+2026-11-15 19:01:17.775382194 [V:onnxruntime:, session_state.cc:1381 VerifyEachNodeIsAssignedToAnEp]  All nodes placed on [CPUExecutionProvider]. Number of nodes: 4
+2026-11-15 19:01:17.775544035 [V:onnxruntime:, session_state.cc:186 CreateGraphInfo] SaveMLValueNameIndexMapping
+2026-11-15 19:01:17.775550178 [V:onnxruntime:, session_state.cc:232 CreateGraphInfo] Done saving OrtValue mappings.
+2026-11-15 19:01:17.775553869 [I:onnxruntime:, allocation_planner.cc:2653 CreateGraphPartitioner] Use DeviceBasedPartition as default
+2026-11-15 19:01:17.775654023 [I:onnxruntime:, session_state_utils.cc:263 SaveInitializedTensors] Saving initialized tensors.
+2026-11-15 19:01:17.775664146 [I:onnxruntime:, session_state_utils.cc:463 SaveInitializedTensors] Done saving initialized tensors
+2026-11-15 19:01:17.775793179 [I:onnxruntime:, inference_session.cc:2867 Initialize] Session successfully initialized.
+OUT (1, 4)

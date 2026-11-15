@@ -1,0 +1,14 @@
+# ILLUSTRATIVE: hand-written to show the "split graph" case in Android logcat format.
+# Real logs from your phone will have different hashes, node names and counts.
+11-16 00:30:01.101  8123  8123 I onnxruntime: [I:onnxruntime:, nnapi_execution_provider.cc:191 GetCapability] NnapiExecutionProvider::GetCapability, number of partitions supported by NNAPI: 4 number of nodes in the graph: 64 number of nodes supported by NNAPI: 52
+11-16 00:30:01.140  8123  8123 V onnxruntime: [V:onnxruntime:, session_state.cc:1378 VerifyEachNodeIsAssignedToAnEp] Node placements
+11-16 00:30:01.140  8123  8123 V onnxruntime: [V:onnxruntime:, session_state.cc:1384 VerifyEachNodeIsAssignedToAnEp]  Node(s) placed on [NnapiExecutionProvider]. Number of nodes: 4
+11-16 00:30:01.140  8123  8123 V onnxruntime: [V:onnxruntime:, session_state.cc:1386 VerifyEachNodeIsAssignedToAnEp]   NNAPI_8421337_0 (NnapiExecutionProvider_NNAPI_8421337_0_0)
+11-16 00:30:01.140  8123  8123 V onnxruntime: [V:onnxruntime:, session_state.cc:1386 VerifyEachNodeIsAssignedToAnEp]   NNAPI_8421337_1 (NnapiExecutionProvider_NNAPI_8421337_1_0)
+11-16 00:30:01.140  8123  8123 V onnxruntime: [V:onnxruntime:, session_state.cc:1386 VerifyEachNodeIsAssignedToAnEp]   NNAPI_8421337_2 (NnapiExecutionProvider_NNAPI_8421337_2_0)
+11-16 00:30:01.140  8123  8123 V onnxruntime: [V:onnxruntime:, session_state.cc:1386 VerifyEachNodeIsAssignedToAnEp]   NNAPI_8421337_3 (NnapiExecutionProvider_NNAPI_8421337_3_0)
+11-16 00:30:01.140  8123  8123 V onnxruntime: [V:onnxruntime:, session_state.cc:1384 VerifyEachNodeIsAssignedToAnEp]  Node(s) placed on [CPUExecutionProvider]. Number of nodes: 12
+11-16 00:30:01.140  8123  8123 V onnxruntime: [V:onnxruntime:, session_state.cc:1386 VerifyEachNodeIsAssignedToAnEp]   Resize (upsample_1)
+11-16 00:30:01.140  8123  8123 V onnxruntime: [V:onnxruntime:, session_state.cc:1386 VerifyEachNodeIsAssignedToAnEp]   Resize (upsample_2)
+11-16 00:30:01.140  8123  8123 V onnxruntime: [V:onnxruntime:, session_state.cc:1386 VerifyEachNodeIsAssignedToAnEp]   NonMaxSuppression (nms)
+11-16 00:30:01.141  8123  8123 I onnxruntime: [I:onnxruntime:, inference_session.cc:2867 Initialize] Session successfully initialized.
